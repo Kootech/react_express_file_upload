@@ -3,7 +3,8 @@ export const getItems = (req, res) => {
 };
 
 export const addItem = (req, res) => {
-  res.send(`addItem working`);
+  console.log(req.body);
+  console.log(req.file);
 };
 
 export const updateItem = (req, res) => {
