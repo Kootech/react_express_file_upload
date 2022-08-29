@@ -23,3 +23,5 @@ router.get("/", getItems);
 router.post("/", addItem);
 router.put("/:id", updateItem);
 router.delete("/:id", deleteItem);
+
+export default router;

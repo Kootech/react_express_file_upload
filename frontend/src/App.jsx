@@ -1,14 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import Index from "./pages/Index";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import AddItem from "./pages/AddItem";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route exact path="/" element={<Index />} />
+          <Route path="/additem" element={<AddItem />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
